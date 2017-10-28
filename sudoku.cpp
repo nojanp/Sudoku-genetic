@@ -156,64 +156,6 @@ sudoku mutation(sudoku s)
 	s.setC();
 	return s;
 
-	//for(int i = 0; i < 9; i++)
-	//	for(int j = 0; j < 9; j++)
-	//		if(shouldMutate(s, i, j))
-	//		{
-	//			int cnt = 0;
-	//			int r;
-	//			do{
-	//				r = rand()%9;
-	//				cnt++;
-	//				if(cnt == 100)
-	//					break;
-	//			}while(r == j || init[i][r] != 0);
-	//			int tmp = s.table[i][j];
-	//			s.table[i][j] = s.table[i][r];
-	//			s.table[i][r] = tmp;
-
-	//			if(j/3*3 != r/3*3)
-	//			{
-	//				int br, bc;
-	//				br = bc = -1;
-	//				int rinit = i/3*3, cinit = j/3*3;
-	//				for(int k = rinit; k < rinit+3; k++)
-	//					for(int l = cinit; l < cinit+3; l++)
-	//						if(k != i && l != j && s.table[k][l] == s.table[i][j])
-	//						{
-	//							br = k;
-	//							bc = l;
-	//							break;
-	//						}
-
-	//				int obc = -1;
-	//				for(int k = 0; k < 9; k++)
-	//					if(s.table[br][k] == s.table[i][r])
-	//						obc = k;
-
-	//				if(obc/3*3 != r/3*3)
-	//				{
-	//					int tmpr = i/3 + 3 - (i%3 + br%3);
-	//					for(int k = 0; k < 9; k++)
-	//					if(s.table[tmpr][k] == s.table[i][r])
-	//						obc = k;
-
-	//				}
-	//				if(obc == -1)
-	//				{
-	//					s.print();
-	//					cout << ":|\n";
-	//					exit(0);
-	//				}
-
-	//				tmp = s.table[br][bc];
-	//				s.table[br][bc] = s.table[i][obc];
-	//				s.table[i][obc] = tmp;
-	//			}
-
-	//		}
-	//s.setC();
-	//return s;
 }
 
 sudoku recombination(sudoku p1, sudoku p2)
